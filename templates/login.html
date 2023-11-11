@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés</title>
+</head>
+<body>
+    <h1>Bejelentkezés</h1>
+    <form method="post" action="{{ url_for('login') }}">
+        <label>Email:</label>
+        <input type="email" name="email" required><br>
+        <label>Jelszó:</label>
+        <input type="password" name="password" required><br>
+        <input type="submit" value="Bejelentkezés">
+    </form>
+    <p>Nincs még fiókod? <a href="{{ url_for('register') }}">Regisztráció</a></p>
+</body>
+</html>
